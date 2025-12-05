@@ -4,18 +4,35 @@ text-align: center;
 justify-items: center;
 font-family: monospace, sans-serif;
 font-size: 45px;
-margin-top: 150px;
+margin-top: 50px;
 text-shadow: 2px 2px 30px rgb(94, 0, 0);
 
 }
 
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+/*
 body{
-/*background-color: rgb(113, 92, 170);*/
+/*background-color: rgb(113, 92, 170);
 background: linear-gradient(144deg, #00DDEB, #5b42f3, #AF40FF);
 text-align: center;
 align-items: center;
 justify-items: center;
 margin-top: auto;
+}
+*/
+body {
+  background: linear-gradient(144deg, #00DDEB, #5b42f3, #AF40FF);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
 
 
 .button-64 {
@@ -41,6 +58,8 @@ margin-top: auto;
   white-space: nowrap;
   cursor: pointer;
   margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-64:active,
@@ -62,14 +81,66 @@ margin-top: auto;
 }
 
 .planet-name {
-    color: rgb(34, 197, 61);      /* blue */
+    color: rgb(34, 197, 61);      
     font-weight: bold;
     font-size: larger;
 }
 
 .planet-weight {
-    color: rgb(34, 197, 61);      /* reddish-pink */
+    color: rgb(34, 197, 61);      
     font-weight: bold;
     font-size: larger;
 }
+
+/*.container {
+    width: 100%;
+}*/
+
+.row {
+  display: flex;
+  gap: 20px; /* Provides space between columns */
+  margin-bottom: 10px;
+}
+
+.columnR {
+  /* On mobile, columns take up the full width (minus gap) */
+  flex: 1 1 100%;
+  padding: 10px;
+  /*background-color: #eee;*/
+  text-align: left;
+  alignment-baseline: left;
+  justify-content: left;
+  justify-items: left;
+  align-items: left;
+  align-content: left;
+}
+.columnL {
+  /* On mobile, columns take up the full width (minus gap) */
+  flex: 1 1 100%;
+  padding: 10px;
+  /*background-color: #eee;*/
+  text-align: right;
+  alignment-baseline: right;
+  justify-content: right;
+  justify-items: right;
+  align-items: right;
+  align-content: right;
+}
+
+  .column{
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+  }
+
+@media (min-width: 600px) {
+  .column {
+    /* On wider screens (tablets/desktops), columns share the space equally */
+    flex: 1 1 calc(33% - 10px); /* Makes them roughly third-width */
+    
+  }
+
+
 }
